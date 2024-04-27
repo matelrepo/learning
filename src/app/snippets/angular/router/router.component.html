@@ -1,1 +1,77 @@
-<p>router works!</p>
+<div class="container">
+  <p>Angular Scrolling to an Anchor</p>
+<a href="https://stackoverflow.com/questions/44441089/angular4-scrolling-to-anchor">Source</a>
+
+<section>
+  <h1>1. Root Module Routes with forRoot()</h1>
+  Import the RouterModule.forRoot
+  <pre><code [highlight]="angular_module_root" language="typescript"></code></pre>
+  Change the component with the router-outlet directive
+  <pre><code [highlight]="router_outlet" language="typescript"></code></pre>
+  <p>
+  What kind of routes do we want?
+  We have path to match against, the component we want to look, the route we want to redirect, etc
+  </p>
+  <pre><code [highlight]="angular_routes_ts" language="typescript"></code></pre>
+</section>
+
+<section>
+  <h1>2. Create Nested Child Routes</h1>
+  <p>You might want to create routes that are relative to a component other than your root component. These types of nested routes are called child routes.</p>
+  <pre><code [highlight]="angular_nested_routes_ts" language="typescript"></code></pre>
+  <pre><code [highlight]="angular_nested_routes_html" language="html"></code></pre>
+
+</section>
+
+<section>
+  <h1>3. Redirect routes to new path</h1>
+  <p>We can declare a path that redirects to another path</p>
+  <p>PathMatch full to match the path in full</p>
+  <pre><code [highlight]="angular_path_redirect" language="typescript"></code></pre>
+</section>
+
+<section>
+  <h1>4. Handle 404 Not Found with wildcards</h1>
+  <p>It will redirect any URLs not mapped yet</p>
+  <pre><code [highlight]="angular_path_wildcard" language="typescript"></code></pre>
+</section>
+
+  <section>
+    <h1>5. Lazy-Loading Feature Modules</h1>
+    <p>it is possible to lazy load the module in changing the route path as per below</p>
+    <pre><code [highlight]="angular_nested_routes_ts_module" language="typescript"></code></pre>
+    <p>The child module should import RouterModule.forChild(routes) instead of RouterModule.forRoot(routes). Routes child will be define in the module child</p>
+    <pre><code [highlight]="angular_routes_ts2" language="typescript"></code></pre>
+  </section>
+
+  <section>
+    <h1>6. Declarative Navigation with routerLink Directives</h1>
+    <p>We can use either the attribute (string) or the directive (variable) for dynamic route</p>
+    <pre><code [highlight]="router_link" language="html"></code></pre>
+  </section>
+
+  <section>
+    <h1>7. Dynamic Route Params and ActivatedRoute</h1>
+    <p>In the module with routes definition we declare the route using ":" like ":id"</p>
+    <pre><code [highlight]="route_params" language="typescript"></code></pre>
+    <p>Then in the typescript file we will request some information about the route that we are on. Let's start to import the ActivatedRoute</p>
+    <pre><code [highlight]="route_params_req_1" language="typescript"></code></pre>
+    <p>Then we retrieve the param using the route snapshot</p>
+    <pre><code [highlight]="route_params_req_2" language="typescript"></code></pre>
+  </section>
+
+  <section>
+    <h1>8. Pass Custom Data to Routed Components</h1>
+    <p>There is the possibility to pass custom data in the route</p>
+    <pre><code [highlight]="angular_data" language="typescript"></code></pre>
+    <pre><code [highlight]="angular_data_var" language="typescript"></code></pre>
+  </section>
+
+  <section>
+    <h1>9. Programmatic Navigation with Router.navigate()</h1>
+    <p>We use <span style="font-weight: bold">ActivatedRoute</span> to grab information from the router and <span style="font-weight: bold">Router</span> itself is the underlying API we can use to navigate around in our application. We instance we can navigate once something has been updated </p>
+    <pre><code [highlight]="angular_navigate" language="typescript"></code></pre>
+  </section>
+
+</div>
+

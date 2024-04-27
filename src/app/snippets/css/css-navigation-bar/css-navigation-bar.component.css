@@ -1,0 +1,25 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 100px;
+}
+
+
+.container div:first-child{
+  display: flex;
+  flex-direction: column;
+}
+
+.container div{
+  margin: 10px 0px;
+}
+
+code{
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .container{
+    font-size: 11px;
+  }
+}

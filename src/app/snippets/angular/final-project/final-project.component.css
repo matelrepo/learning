@@ -1,0 +1,10 @@
+ul{
+  margin-left:40px;
+}
+
+.image{
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  margin-left:40px;
+}

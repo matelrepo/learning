@@ -1,14 +1,14 @@
 .header{
-  /*position:fixed;*/
-  top:0;
-  left:0;
   width: 100%;
   padding: 20px 100px;
   background: lightgray;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1;
+  position: sticky;
+  top:0;
+
 }
 
 .logo{
@@ -39,4 +39,17 @@
 }
 .navbar a:hover::before{
   width: 100%;
+}
+@media only screen and (max-width: 600px) {
+
+  .header{
+    padding: 10px 50px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .logo {
+    display: none;
+  }
+
 }

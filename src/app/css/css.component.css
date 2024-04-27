@@ -1,0 +1,10 @@
+.container{
+  display:flex;
+  flex-direction: column;
+  padding: 20px 100px;
+  /*align-items: center;*/
+}
+
+.panel-topic{
+  font-size: 0.8rem;
+}

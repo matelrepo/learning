@@ -1,1 +1,90 @@
-<p>center-item works!</p>
+<div class="container">
+  <h1>Center item horizontally and vertically</h1>
+  <section class="sources">
+    <a href="https://youtu.be/zqg4A6g9GfA?si=r-KtwVhTFmCxEiox" target="_blank">Source (CSS Position Property
+      Tutorial)</a>
+    <a href="https://youtu.be/fF_NVrd1s14?si=rNZItOOon8zbOaKS" target="_blank">Source (CSS position deep dive)</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container" target="_blank">Source (Flex)</a>
+  </section>
+  <header class="task">
+    The task is to be able to center a div or a text horizontally and/or vertically
+  </header>
+
+  <section id="menu">
+    <h1>1. Position Property in CSS</h1>
+    <p>They are 4 positions:
+    <ul>
+      <li><a (click)="onClick('absolute')">Absolute</a></li>
+      <li><a (click)="onClick('relative')">Relative</a></li>
+      <li><a (click)="onClick('fixed')">Fixed</a></li>
+      <li><a (click)="onClick('sticky')">Sticky</a></li>
+    </ul>
+    <p>These positions needs to set TOP, LEFT, RIGHT or BOTTOM</p>
+  </section>
+
+  <section id="absolute" (click)="onClick('menu')">
+    <h2>Absolute</h2>
+    Absolute positioning of the child needs a relative parent, if it does not have an ancestor element set as position
+    relative it will take the view port.
+    Absolute positioning will take the closest relative in case of several relative ancestor.
+    Absolute relative block match the size of their contents instead and the width in % will be relative to their
+    ancestor.
+    Usually don't use position absolute too often.
+  </section>
+
+  <section id="relative" (click)="onClick('menu')">
+    <h2>Relative</h2>
+    Relative positioning on the child behaves much like the absolute when it is relative to his parent container.
+    Position relative is by default relative to his parent container.
+    Position relative, the space on the DOM is still reserved. Position relative open z-index for staking contents.
+  </section>
+
+  <section id="fixed" (click)="onClick('menu')">
+    <h2>Fixed</h2>
+    Like position absolute it shrinks to his content so it requires sometimes width:100%. The other contents ignores it
+    like position absolute. They dont know it exists.
+    Once defined the TOP, LEFT, RIGHT or BOTTOM it will stay in the fixed position all the time even when we scroll the
+    page.
+    It is not really used as a header now.
+  </section>
+
+  <section id="sticky" (click)="onClick('menu')">
+    <h2>Sticky</h2>
+    Regular block element. Live in the flow compared to Fixed and Absolute. The TOP value is important as it is where it
+    starts to sticks. Defining TOP:0 for instance will make the element sticks to the top of his relative container or
+    view port. While scrolling down, it will stick until it disappears
+    with his container. It will not overflow. Position sticky does not shrink but will not overflow also. So sometimes
+    it is not sticking with display:Flex. With Flex they have by defaut align-items: strech. Therefore the sticky can't
+    scroll down and the align-self should be setup to start
+  </section>
+
+  <section>
+    <h1>How to center item then?</h1>
+    <div class="example-container">
+        <div class="demo1"><div></div></div>
+        <div class="code">
+<!--          <pre><code [highlight]="parent" language="css"></code></pre>-->
+        </div>
+        <div class="demo2"><div></div></div>
+        <div class="code">
+          <pre><code [highlight]="parent" language="css"></code></pre>
+          <pre><code [highlight]="child" language="css"></code></pre>
+        </div>
+    </div>
+  </section>
+  <section>
+    <h1>2. Using Flex</h1>
+    <div class="example-container">
+      <div class="demo1"><div></div></div>
+      <div class="code">
+        <!--          <pre><code [highlight]="parent" language="css"></code></pre>-->
+      </div>
+      <div class="box"><div></div></div>
+      <div class="code">
+        <pre><code [highlight]="parent_flex" language="css"></code></pre>
+        <pre><code [highlight]="child_flex" language="css"></code></pre>
+      </div>
+    </div>
+  </section>
+
+</div>
