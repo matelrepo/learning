@@ -62,7 +62,7 @@ export const routes: Routes = [
     MultiModuleComponent,
     FinalProjectComponent,
     ViewEncapsulationComponent,
-    AngularStylingComponent
+    AngularStylingComponent,
   ],
   imports: [
     BrowserModule,

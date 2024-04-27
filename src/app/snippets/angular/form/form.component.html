@@ -1,1 +1,93 @@
-<p>form works!</p>
+<div class="container">
+  <h1>{{title}}</h1>
+  <header class="task">
+    {{task}}
+  </header>
+
+  <section>
+    <h2>1. Create a form container and dumb component</h2>
+    <p>We are going to create two new components. The first is going to be a new container component which eventually
+      will be tied up to some routing</p>
+    <p>We will also a dumb form component <span>donut-form</span></p>
+    <pre><code [highlight]="donutSingle" language="typescript"></code></pre>
+    <pre><code [highlight]="donutForm" language="typescript"></code></pre>
+    <p>Container component will be in charge of communicating with some services.
+      The role of <span>donut-single</span> is to talk to a service
+    </p>
+    <p>We will have some events from <span>donut-form</span> like create, save, delete. We use the same form to create
+      and edit</p>
+  </section>
+  <section>
+    <h2>2. Use NgForm with a Template Ref Variable</h2>
+    <p>Let's start to build <span>donut-form</span>. We have to import <span>FormsModule</span></p>
+    <pre><code [highlight]="formContent" language="typescript"></code></pre>
+  </section>
+  <section>
+    <h2>3. input Binding with NgModel</h2>
+    <p>We create a label which contains a span tag and input. The name in input which matches the attribute of the
+      object</p></section>
+  <pre><code [highlight]="formInput" language="typescript"></code></pre>
+  <p>ngModel is in charge to create a new model from the input element so we will find a name field added to our object
+    <span>form.value</span></p>
+
+  <section>
+    <h2>4. Radio Button with NgModel</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>5. select and option Rendering and Binding</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>6. Textarea Binding with NgModel</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>7. Add Validatioon Constraints and Form Status</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>8. NgModel Template Refs and Validation States</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>9. Show Error Messages on Validation Change</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>10. Style Invalid Input Fields Globally</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>11. Form Submit with NgSubmit</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>12. Disable Submit and Safety Check Submissions</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>13. Trigger Validation Messages on Submit</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>14. Control NgModel Writes with ngModelOptions</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>15. Trigger a Form State and Validation Reset</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>16. Show Visual Feedback on Form Submission</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>17. Emit Form Payload to Smart Container via Output</h2>
+    <p></p>
+  </section>
+  <section>
+    <h2>18. One-Way Data Binding to NgModel</h2>
+    <p></p>
+  </section>
+</div>
