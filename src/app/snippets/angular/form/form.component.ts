@@ -26,6 +26,41 @@ export class FormComponent {
     </label>
   </form>`
 
+  formRadio=`
+  <div class="donut-form-radios">
+    <p class="donut-form-radios-label">Promo:</p>
+    <label>
+      <input type="radio" name="promo" [value]="undefined" ngModel/>
+      <span>None</span>
+    </label>
+    <label>
+      <input type="radio" name="promo" value="new" ngModel/>
+      <span>New</span>
+    </label>
+    <label>
+      <input type="radio" name="promo" value="limited" ngModel/>
+      <span>Limited</span>
+    </label>
+  </div>`
+
+  formSelect=`    <label>
+      <span>Icon</span>
+      <select
+        name="icon"
+        class="input input--select" ngModel>
+        <option *ngFor="let icon of icons" [ngValue]="icon"></option>
+      </select>
+    </label>`
+
+  formTextArea =`    <label>
+      <span>Description</span>
+      <textarea
+        name="description"
+        class="input input--textarea"
+        ngModel>
+      </textarea>
+    </label>`
+
 
 
 }
